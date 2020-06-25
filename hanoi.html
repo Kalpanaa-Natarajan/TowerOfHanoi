@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Tower of Hanoi </title>
+    <!-- This below line helps the website responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hanoi.css">
+    <script src="toh1.js"></script> 
+</head>
+<body>
+    <div id="div1">The text above has been created dynamically.</div>
+    <script>
+        document.write(Date());
+        document.body.onload = addElement;
+
+        function addElement () { 
+        // create a new div element 
+        var newDiv = document.createElement("div"); 
+        // and give it some content 
+        var newContent = document.createTextNode("Hi there and greetings!"); 
+        // add the text node to the newly created div
+        newDiv.appendChild(newContent);  
+
+        // add the newly created element and its content into the DOM 
+        var currentDiv = document.getElementById("div1"); 
+        document.body.insertBefore(newDiv, currentDiv); 
+        }
+    </script>
+    <div id="container">
+
+    <div id="bar0"><img src="Bar.png" /></div>
+    
+    <div id="bar1"><img src="Bar.png" /></div>
+    
+    <div id="bar2"><img src="Bar.png" /></div>
+    <div id="bottombar"></div>
+
+    <div class="disk" id="disk0" ><img class="insideImg"  style="left:54px;"  src="Bar2.png" /></div>
+    <div class="disk" id="disk1" ><img class="insideImg"  style="left:34px;"  src="Bar2.png" /></div> 
+    <div class="disk" id="disk2" ><img class="insideImg"  style="left:14px;"  src="Bar2.png" /></div> 
+
+</body>
+</html>
